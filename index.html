@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Junk</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blur {
+            filter: blur(5px);
+            transition: filter 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video id="intro-video" width="100%" height="100%" autoplay muted>
+            <source src="space_junk_intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div id="site-content" style="display: none;">
+        <header>
+            <img src="space_junk_logo.jpg" alt="Space Junk Logo" class="logo">
+            <h1><b>JUNK GEN ai</b></h1>
+        </header>
+
+        <main>
+            <section class="intro">
+                <h2>Calculate the Safest Path to Space</h2>
+                <br>
+                <br>
+                <p>Enter the details of your journey to ensure a safe and debris-free flight.</p>
+            </section>
+
+            <section class="path-calculation">
+                <form id="pathForm">
+                    <label for="launchDate">Launch Date:</label>
+                    <input type="date" id="launchDate" name="launchDate" required>
+
+                    <label for="launchTime">Launch Time:</label>
+                    <input type="time" id="launchTime" name="launchTime" required>
+
+                    <label for="launchLocation">Launch Location:</label>
+                    <input type="text" id="launchLocation" name="launchLocation" placeholder="e.g., Cape Canaveral" required>
+
+                    <label for="landingLocation">Landing Location:</label>
+                    <input type="text" id="landingLocation" name="landingLocation" placeholder="e.g., International Space Station" required>
+
+                    <button type="submit">Calculate Safe Path</button>
+                </form>
+                <div id="pathResult"></div>
+                <a href="http://astria.tacc.utexas.edu/AstriaGraph/" target="_blank">
+                    <button id="space-debris-tracker-button" style="display: block; margin: 20px auto;">Space Debris Tracker</button>
+                </a>
+            </section>
+        </main>
+
+        <footer>
+            <p> 2024 Space Junk. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        document.getElementById('intro-video').addEventListener('ended', function() {
+            document.getElementById('video-container').classList.add('blur');
+            setTimeout(function() {
+                document.getElementById('video-container').style.display = 'none';
+                document.getElementById('site-content').style.display = 'block';
+            }, 500);
+        });
+    </script>
+</body>
+</html>

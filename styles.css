@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; /* Changed font to Montserrat, a modern sans-serif font */
+    background-image: url('no water mark.jpg'); /* Changed background image to a space-themed one */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Changed text color to white */
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(20, 20, 20, 0.9); /* Changed background color to a dark gray */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.logo {
+    width: 250px; /* Increased logo size to 250px */
+    margin-right: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 700; /* Changed font weight to bold */
+    font-family: 'Arial Black', sans-serif; /* Changed font family to Arial Black, a bold font */
+    color: #33ccff; /* Changed font color to a bright blue */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.intro {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(40, 40, 40, 0.7); /* Changed background color to a dark gray */
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    animation: slideInUp 1.5s ease-in-out;
+    display: flex; /* Added to center align the space debris tracker */
+    justify-content: center; /* Added to center align the space debris tracker */
+    align-items: center; /* Added to center align the space debris tracker */
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #66d9ef; /* Changed font color to a pale blue */
+}
+
+.path-calculation {
+    padding: 20px;
+    background-color: rgba(60, 60, 60, 0.5); /* Changed background color to a dark gray */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(20, 20, 20, 0.3); /* Changed background color to a dark gray */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 2s ease-in-out;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #fff; /* Changed font color to white */
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: rgba(40, 40, 40, 0.2); /* Changed background color to a dark gray */
+    color: #fff; /* Changed font color to white */
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px #33ccff; /* Changed box shadow color to a bright blue */
+}
+
+button {
+    padding: 15px;
+    background-color: #33ccff; /* Changed background color to a bright blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Changed hover background color to a darker blue */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Added line gap */
+.path-calculation::after {
+    content: '';
+    display: block;
+    height: 20px;
+    background-color: transparent;
+}
